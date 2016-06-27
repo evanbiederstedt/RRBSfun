@@ -22,7 +22,7 @@ for filename in normalB_cellbatch_mcell:
                   'geneDistalRegulatoryModulesK562Distance', 'hypoInHues64','hypoInHues64Distance'], axis=1)
 
     df['total_reads'] = df[["methReadCount", "unmethReadCount", "mixedReadCount"]].sum(axis=1)
-    
+
     df['totreads_genesDistance'] = df[["methReadCount", "unmethReadCount", "mixedReadCount"]].sum(axis=1).where(df['genesDistance']<0, 0)
     df['totreads_exonsDistance'] = df[["methReadCount", "unmethReadCount", "mixedReadCount"]].sum(axis=1).where(df['exonsDistance']<0, 0)
     df['totreads_intronsDistance'] = df[["methReadCount", "unmethReadCount", "mixedReadCount"]].sum(axis=1).where(df['intronsDistance']<0, 0)
@@ -31,8 +31,8 @@ for filename in normalB_cellbatch_mcell:
     df['totreads_ctcfDistance'] = df[["methReadCount", "unmethReadCount", "mixedReadCount"]].sum(axis=1).where(df['ctcfDistance']<0, 0)
     df['totreads_geneDistalRegulatoryModulesDistance'] = df[["methReadCount", "unmethReadCount", "mixedReadCount"]].sum(axis=1).where(df['geneDistalRegulatoryModulesDistance']<0, 0)
     df['totreads_firstExonDistance'] = df[["methReadCount", "unmethReadCount", "mixedReadCount"]].sum(axis=1).where(df['firstExonDistance']<0, 0)
-                                    
-                                    
+
+
     df['mixedReads_genesDistance'] = np.where(df['genesDistance']<0, df['mixedReadCount'], 0)
     df['mixedReads_exonsDistance'] = np.where(df['exonsDistance']<0, df['mixedReadCount'], 0)
     df['mixedReads_intronsDistance'] = np.where(df['intronsDistance']<0, df['mixedReadCount'], 0)
@@ -42,8 +42,8 @@ for filename in normalB_cellbatch_mcell:
     df['mixedReads_geneDistalRegulatoryModulesDistance'] = np.where(df['geneDistalRegulatoryModulesDistance'] <0, df['mixedReadCount'], 0)
     df['mixedReads_vistaEnhancersDistance'] = np.where(df['vistaEnhancersDistance'] <0, df['mixedReadCount'], 0)
     df['mixedReads_firstExonDistance'] = np.where(df['firstExonDistance'] <0, df['mixedReadCount'], 0)
-                                                                        
-                                                                        
+
+
     df['fullMethReads_genesDistance'] = np.where(df['genesDistance']<0, df['methReadCount'], 0)
     df['fullMethReads_exonsDistance'] = np.where(df['exonsDistance']<0, df['methReadCount'], 0)
     df['fullMethReads_intronsDistance'] = np.where(df['intronsDistance']<0, df['methReadCount'], 0)
@@ -53,10 +53,10 @@ for filename in normalB_cellbatch_mcell:
     df['fullMethReads_geneDistalRegulatoryModulesDistance'] = np.where(df['geneDistalRegulatoryModulesDistance'] <0, df['methReadCount'], 0)
     df['fullMethReads_vistaEnhancersDistance'] = np.where(df['vistaEnhancersDistance'] <0, df['methReadCount'], 0)
     df['fullMethReads_firstExonDistance'] = np.where(df['firstExonDistance'] <0, df['methReadCount'], 0)
-                                                                                                            
+
     df = df.sum()
     df['filename'] = str(filename)
-                                                                                                                
+
     df['PDR_total'] = df['mixedReadCount']/df['total_reads']
     df['PDR_GenesBody'] = df['mixedReads_genesDistance']/df['totreads_genesDistance']
     df['PDR_Exons'] = df['mixedReads_exonsDistance']/df['totreads_exonsDistance']
@@ -65,7 +65,7 @@ for filename in normalB_cellbatch_mcell:
     df['PDR_CGIslands'] = df['mixedReads_cgiDistance']/df['totreads_cgiDistance']
     df['PDR_CTCF'] = df['mixedReads_ctcfDistance']/df['totreads_ctcfDistance']
     df['PDR_Enhancer'] = df['mixedReads_geneDistalRegulatoryModulesDistance']/df['totreads_geneDistalRegulatoryModulesDistance']
-                                                                                                                                                
+
     df['percent_totalMeth'] = df['methReadCount']/df['total_reads']
     df['totalMeth_GenesBody'] = df['fullMethReads_genesDistance']/df['totreads_genesDistance']
     df['totalMeth_Exons'] = df['fullMethReads_exonsDistance']/df['totreads_exonsDistance']
@@ -79,7 +79,7 @@ for filename in normalB_cellbatch_mcell:
 
 
 # export as .csv
-newdf1.to_csv('PDR_genomicRegions_RRBS_normal_B_cell_B1.csv')
+newdf1.to_csv('PDR_genomicRegions_RRBS_normal_B_cell_D1.csv')
 
 ################################################
 ################################################
@@ -121,4 +121,3 @@ newdf1.to_csv('PDR_genomicRegions_RRBS_normal_B_cell_B1.csv')
 #
 # Question (3) What's up with 'tssDistance'?
 #
-
