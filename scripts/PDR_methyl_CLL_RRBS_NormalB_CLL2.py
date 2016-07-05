@@ -36,10 +36,12 @@ for filename in cll_cells2:
                   
     df["total_reads"] = df[["methReadCount", "unmethReadCount", "mixedReadCount"]].sum(axis=1)
                   
-    df = df.groupby(["read_stack_ID"])[["filename", "thisMeth", "thisUnmeth", "methReadCount", "unmethReadCount", "mixedReadCount", "total_reads"]].sum()
+    df = df.groupby(["read_stack_ID"])[["filename", "thisMeth", "thisUnmeth", "methReadCount",
+                                    "unmethReadCount", "mixedReadCount", "total_reads"]].sum()
+    
     df["filename"] = str(filename)
                   
-    df = df[["filename", "thisMeth", "mixedReadCount", "total_reads"]].sum()
+    df = df[["filename", "thisMeth", "thisUnmeth", "mixedReadCount", "total_reads"]].sum()
                   
     df["PDR_total"] = df["mixedReadCount"]/df["total_reads"]
                   
