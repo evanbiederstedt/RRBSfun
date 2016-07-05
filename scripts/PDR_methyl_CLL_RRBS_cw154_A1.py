@@ -43,7 +43,7 @@ for filename in cll_cells1:
                   
     df["PDR_total"] = df["mixedReadCount"]/df["total_reads"]
                   
-    df["methylation_total"] = df['thisMeth']/df['total_reads']
+    df["methylation"] = df["thisMeth"]/(df["thisMeth"]+df["thisUnmeth"])          # corrected
                   
     newdf1 = newdf1.append(df, ignore_index=True)
 
