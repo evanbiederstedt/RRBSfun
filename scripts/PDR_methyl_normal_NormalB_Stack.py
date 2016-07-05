@@ -42,7 +42,7 @@ for filename in normal_B:
     df1.reset_index(inplace=True)
 
 
-    df1["percent_methylationPerStack"] = df1["thisMeth"]/df1["total_reads"]
+    df1["methylation"] = df1["thisMeth"]/(df1["thisMeth"]+df1["thisUnmeth"])          # corrected
     df1["PDR_per_stack"] = df1["mixedReadCount"]/df1["total_reads"]
     
     df1.to_csv(str("stacked_") + str(filename) +str(".csv"))
