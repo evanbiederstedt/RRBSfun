@@ -11,9 +11,9 @@ os.chdir('/Users/evanbiederstedt/Downloads/RRBS_data_files')
 
 
 
-pcells = glob.glob("RRBS_NormalBCD19pCD27mcell*")  # mcell
+mcells = glob.glob("RRBS_NormalBCD19pCD27mcell*")  # mcell
 newdf1 = pd.DataFrame()
-for filename in pcells:
+for filename in mcells:
     df = pd.read_table(filename)
     df['filename'] = str(filename)
     
