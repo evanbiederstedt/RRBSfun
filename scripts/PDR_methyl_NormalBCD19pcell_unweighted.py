@@ -11,11 +11,11 @@ os.chdir('/Users/evanbiederstedt/Downloads/RRBS_data_files')
 
 
 # set glob subdirectory via cell batch
-normal_B = glob.glob("RRBS_normal_B*")
+pcells = glob.glob("RRBS_NormalBCD19pcell*")
 
 
 newdf1 = pd.DataFrame()
-for filename in normal_B:
+for filename in pcells:
     df = pd.read_table(filename)
     df['filename'] = str(filename)
     
@@ -48,7 +48,7 @@ for filename in normal_B:
                   
     df1["filename"] = str(filename)
                   
-    df2 = df1[["filename", "methylation_per_stack", "PDR_per_stack_unweighted"]].sum()
+    df2 = df1[["filename", "methylation_per_stack", "PDR_per_stack_unweighted", "total_reads"]].sum()
                   
     df2["methylation_unweighted"] = df2["methylation_per_stack"]/(df1.read_stack_ID.max())
     df2["PDR_unweighted"] = df2["PDR_per_stack_unweighted"]/(df1.read_stack_ID.max())
@@ -58,9 +58,9 @@ for filename in normal_B:
 
 
 
-newdf1 = newdf1[["filename", "PDR_unweighted", "methylation_unweighted"]]
+newdf1 = newdf1[["filename", "PDR_unweighted", "methylation_unweighted", "total_reads"]]
 
 # export as .csv
-newdf1.to_csv("unweighted_PDR_methyl_RRBS_normal_B.csv")
+newdf1.to_csv("unweighted_PDR_methyl_NormalBCD19pcell.csv")
 
 
