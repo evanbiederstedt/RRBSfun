@@ -9,22 +9,6 @@ import matplotlib
 import os
 os.chdir('/Users/evanbiederstedt/Downloads/RRBS_data_files')
 
-'ctcfUpDistance'
-'ctcfDownDistance'
-'3PrimeUTRDistance'
-'5PrimeUTRDistance'
-'geneDistalRegulatoryModulesK562Distance'
-'hypoInHues64Distance'
-'genesDistance'
-'exonsDistance'
-'intronsDistance'
-'promoterDistance'
-'cgiDistance'
-'ctcfDistance'
-'geneDistalRegulatoryModulesDistance'
-'vistaEnhancersDistance'
-'firstExonDistance'
-'tssDistance'
 
 # 'tssDistance', 'genesDistance','exonsDistance', 'intronsDistance', 'promoterDistance', 'cgiDistance','ctcfDistance', 'ctcfUpDistance', 'ctcfDownDistance','geneDistalRegulatoryModulesDistance', 'vistaEnhancersDistance',  '3PrimeUTRDistance', '5PrimeUTRDistance',  'firstExonDistance','geneDistalRegulatoryModulesK562Distance', 'hypoInHues64Distance'
 
@@ -58,7 +42,7 @@ for filename in mcells:
     newdf1 = newdf1.append(df, ignore_index=True)
 
 
-newdf1 = newdf1[["filename", "methylation", "PDR_total", "thisMeth", "mixedReadCount", "total_reads"]]
+newdf1 = newdf1[["filename", "methylation", "PDR_total", "thisMeth", "mixedReadCount", "total_reads", "ctcfUpDistance", "ctcfDownDistance", "3PrimeUTRDistance", "5PrimeUTRDistance", "geneDistalRegulatoryModulesK562Distance", "hypoInHues64Distance", "genesDistance", "exonsDistance", "intronsDistance", "promoterDistance", "cgiDistance", "ctcfDistance", "geneDistalRegulatoryModulesDistance", "vistaEnhancersDistance", "firstExonDistance", "tssDistance"]]
 
 # export as .csv
-newdf1.to_csv("Meth_PDR_cell_normalmcell_ALL.csv")
+newdf1.to_csv("Meth_PDR_cell_cd27mcell_genomic_regions.csv")
