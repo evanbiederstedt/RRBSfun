@@ -141,7 +141,7 @@ normalB_matrix = normalB_matrix.applymap(lambda x: int(x) if pd.notnull(x) else 
 
 normalB_matrix = normalB_matrix.astype(str).apply(''.join)
 
-tot_normB = pd.Series(normalB_matrix.index.astype(str).str.cat(total_matrix.astype(str),'    '))
+tot_normB = pd.Series(normalB_matrix.index.astype(str).str.cat(normalB_matrix.astype(str),'    '))
 
 tot_normB.to_csv("RRBS_NormalB_total.phy", header=None, index=None)
 
