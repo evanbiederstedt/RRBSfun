@@ -1,7 +1,7 @@
 
 # remove 6 CLL cells
 
-3   RRBS_trito_pool_1_TAAGGCGA.AGGATG
+3      RRBS_trito_pool_1_TAAGGCGA.AGGATG
 43	RRBS_trito_pool_2_CGTACTAG.TGCTGC
 11	RRBS_cw154_CutSmart_proteinase_K_TAGGCATG
 18	RRBS_cw154_CutSmart_proteinase_K_TAGGCATG
