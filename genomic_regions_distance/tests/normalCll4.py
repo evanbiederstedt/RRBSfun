@@ -9,7 +9,7 @@ os.chdir("/gpfs/commons/home/biederstedte-934/evan_projects/correct_phylo_files"
 pcell = glob.glob("binary_position_RRBS_NormalBCD19pCD27pcell*")
 print(len(pcell))
 cw154cell = glob.glob("binary_position_RRBS_cw154*")
-print(len(cw154cell)
+print(len(cw154cell))
 
 totalfiles = pcell + cw154cell
 print(len(totalfiles))
