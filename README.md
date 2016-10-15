@@ -1,4 +1,4 @@
 # RRBSfun
 
-Epic fun with epiphen's
+Epic fun with epiphy's
 
