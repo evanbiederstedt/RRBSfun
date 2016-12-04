@@ -47,7 +47,7 @@ def between_range(row, group_dict):
 
 between_range_partial = partial(between_range, group_dict=df_dict)
 
-repeats_found = anno.apply(between_range_partial, axis=0)
+repeats_found = anno.apply(between_range_partial, axis=1)
 anno["hg19_repeats"] = repeats_found
 
 anno.to_csv("repeats_try3.csv", index=False)
