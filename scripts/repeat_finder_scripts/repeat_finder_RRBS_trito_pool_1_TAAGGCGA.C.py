@@ -21,21 +21,3 @@ for filename in annofiles:
     df["hg19_repeats"] = df.apply(between_range, axis = 1)
     df.to_csv(str("repeatregions_") + filename + ".csv", index=False)
 
-
-
-qsub -q commons.q -N NormalBCD19pCD27pcell1_22_A -j y -cwd -o /gpfs/commons/home/biederstedte-934/evan_projects/RRBS_anno_clean submit_RRBS_NormalBCD19pCD27pcell1_22_TAGGCATG.A.sh
-
-
-
-
-submit_RRBS_trito_pool_1_TAAGGCGA.A.sh
-submit_RRBS_trito_pool_1_TAAGGCGA.C.sh
-submit_RRBS_trito_pool_1_TAAGGCGA.G.sh
-submit_RRBS_trito_pool_1_TAAGGCGA.T.sh
-
-
-submit_RRBS_trito_pool_2_CGTACTAG.A.sh
-submit_RRBS_trito_pool_2_CGTACTAG.C.sh
-submit_RRBS_trito_pool_2_CGTACTAG.G.sh
-submit_RRBS_trito_pool_2_CGTACTAG.T.sh
-
