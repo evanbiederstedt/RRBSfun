@@ -7,7 +7,7 @@ import os
 os.chdir("/gpfs/commons/home/biederstedte-934/evan_projects/RRBS_anno_clean")
 
 repeats = pd.read_csv("repeats_hg19.csv")
-annofiles = glob.glob("RRBS_NormalBCD19pCD27mcell1_22_CGAGGCTG.G*")
+annofiles = glob.glob("RRBS_NormalBCD19pCD27pcell1_22_TAGGCATG.G*")
 
 def between_range(row):
     subset = repeats.loc[(row["chr"] == repeats.chr) & (row.start >= repeats.start) & (row.start <= repeats.end), :]
