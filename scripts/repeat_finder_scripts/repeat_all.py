@@ -38,8 +38,6 @@ def between_range(row, group_dict):
         return subset.iloc[0]
 
 
-# In[12]:
-
 from functools import partial
 from time import time
 between_range_partial = partial(between_range, group_dict=df_dict)
