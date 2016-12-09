@@ -1,0 +1,134 @@
+IMPORTANT WARNING: Alignment column 6367 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 7868 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 7870 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 9794 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 9795 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 14415 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 20404 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 21423 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 31146 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 31589 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 32054 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 45030 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 50601 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 52130 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 58075 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 60647 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 61999 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 64776 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 75581 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 80641 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 82047 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 82048 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 82049 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 83291 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 88734 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 92037 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 104972 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 108906 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 110682 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 117114 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 119169 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 119406 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 123713 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 129264 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 131983 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 142349 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 142350 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 154841 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 156303 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 156887 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 166845 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 167073 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 168477 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 169605 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 184129 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 185692 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 188855 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 189147 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 190232 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 191857 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 192457 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 202475 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 203582 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 204924 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 208860 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 212618 contains only undetermined values which will be treated as missing data
+
+IMPORTANT WARNING
+Found 56 columns that contain only undetermined values which will be treated as missing data.
+Normally these columns should be excluded from the analysis.
+
+An alignment file with undetermined columns removed has already
+been printed to file /gpfs/commons/home/biederstedte-934/evan_projects/correct_phylo_files/total_chrom14.phy.reduced
+
+Alignment has 56 completely undetermined sites that will be automatically removed from the input data
+
+
+
+This is RAxML version 8.2.9 released by Alexandros Stamatakis on July 20 2016.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 172521 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 92.59%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 user-specified trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 172521
+Name: No Name Provided
+DataType: BINARY/MORPHOLOGICAL
+Substitution Matrix: Uncorrected
+
+
+
+
+RAxML was called as follows:
+
+/gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/raxmlHPC-PTHREADS -T 30 -p 56560 -m BINGAMMA -s /gpfs/commons/home/biederstedte-934/evan_projects/correct_phylo_files/total_chrom14.phy -g /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/constraint1.tre -n T1_chr14_C 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.473 0.527 
+
+Inference[0]: Time 46410.155902 GAMMA-based likelihood -1959790.643774, best rearrangement setting 15
+alpha[0]: 0.627514 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -1959790.643368 tree written to file /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/RAxML_result.T1_chr14_C
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -1959790.643368 .... 
+
+Final GAMMA-based Score of best tree -1959790.643368
+
+Program execution info written to /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/RAxML_info.T1_chr14_C
+Best-scoring ML tree written to: /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/RAxML_bestTree.T1_chr14_C
+
+Overall execution time: 48048.072308 secs or 13.346687 hours or 0.556112 days
+

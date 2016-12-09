@@ -1,0 +1,87 @@
+IMPORTANT WARNING: Alignment column 1043 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 3402 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 4419 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 8157 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 9311 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 9315 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 9846 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 12001 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 12660 contains only undetermined values which will be treated as missing data
+
+IMPORTANT WARNING
+Found 9 columns that contain only undetermined values which will be treated as missing data.
+Normally these columns should be excluded from the analysis.
+
+An alignment file with undetermined columns removed has already
+been printed to file /gpfs/commons/home/biederstedte-934/evan_projects/correct_phylo_files/total_chromY.phy.reduced
+
+Alignment has 9 completely undetermined sites that will be automatically removed from the input data
+
+
+
+This is RAxML version 8.2.9 released by Alexandros Stamatakis on July 20 2016.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 10540 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 96.04%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 user-specified trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 10540
+Name: No Name Provided
+DataType: BINARY/MORPHOLOGICAL
+Substitution Matrix: Uncorrected
+
+
+
+
+RAxML was called as follows:
+
+/gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/raxmlHPC-PTHREADS -T 40 -p 12345 -m BINGAMMA -s /gpfs/commons/home/biederstedte-934/evan_projects/correct_phylo_files/total_chromY.phy -g /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/constraint1.tre -n T1_chrY_A 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.427 0.573 
+
+Inference[0]: Time 1223.665158 GAMMA-based likelihood -90409.351397, best rearrangement setting 25
+alpha[0]: 0.770819 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -90409.350854 tree written to file /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/RAxML_result.T1_chrY_A
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -90409.350854 .... 
+
+Final GAMMA-based Score of best tree -90409.350854
+
+Program execution info written to /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/RAxML_info.T1_chrY_A
+Best-scoring ML tree written to: /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/RAxML_bestTree.T1_chrY_A
+
+Overall execution time: 1281.068806 secs or 0.355852 hours or 0.014827 days
+

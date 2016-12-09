@@ -1,0 +1,109 @@
+IMPORTANT WARNING: Alignment column 9202 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 16117 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 18799 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 20066 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 21722 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 28758 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 32975 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 37436 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 40561 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 40562 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 41660 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 41758 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 41759 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 43971 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 47394 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 52302 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 54374 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 55053 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 55054 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 57715 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 58925 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 61538 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 66822 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 75223 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 76486 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 76761 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 82602 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 88126 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 95495 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 96859 contains only undetermined values which will be treated as missing data
+IMPORTANT WARNING: Alignment column 96860 contains only undetermined values which will be treated as missing data
+
+IMPORTANT WARNING
+Found 31 columns that contain only undetermined values which will be treated as missing data.
+Normally these columns should be excluded from the analysis.
+
+An alignment file with undetermined columns removed has already
+been printed to file /gpfs/commons/home/biederstedte-934/evan_projects/correct_phylo_files/total_chrom21.phy.reduced
+
+Alignment has 31 completely undetermined sites that will be automatically removed from the input data
+
+
+
+This is RAxML version 8.2.9 released by Alexandros Stamatakis on July 20 2016.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 82468 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 92.53%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 user-specified trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 82468
+Name: No Name Provided
+DataType: BINARY/MORPHOLOGICAL
+Substitution Matrix: Uncorrected
+
+
+
+
+RAxML was called as follows:
+
+/gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/raxmlHPC-PTHREADS -T 40 -p 12345 -m BINGAMMA -s /gpfs/commons/home/biederstedte-934/evan_projects/correct_phylo_files/total_chrom21.phy -g /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/constraint1.tre -n T1_chr21_A 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.439 0.561 
+
+Inference[0]: Time 9252.241147 GAMMA-based likelihood -986664.064348, best rearrangement setting 15
+alpha[0]: 0.676261 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -986664.061385 tree written to file /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/RAxML_result.T1_chr21_A
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -986664.061385 .... 
+
+Final GAMMA-based Score of best tree -986664.061385
+
+Program execution info written to /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/RAxML_info.T1_chr21_A
+Best-scoring ML tree written to: /gpfs/commons/home/biederstedte-934/evan_projects/raxml_constraint/standard-RAxML-master/RAxML_bestTree.T1_chr21_A
+
+Overall execution time: 9624.689240 secs or 2.673525 hours or 0.111397 days
+
