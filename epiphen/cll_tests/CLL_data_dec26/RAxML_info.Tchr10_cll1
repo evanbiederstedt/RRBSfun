@@ -1,0 +1,18 @@
+Inference[0]: Time 2061.064492 GAMMA-based likelihood -1005310.347838, best rearrangement setting 10
+alpha[0]: 0.355464 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -1005310.346955 tree written to file /gpfs/commons/home/biederstedte-934/evan_projects/CLL_tests/standard-RAxML-master/RAxML_result.Tchr10_cll1
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -1005310.346955 .... 
+
+Final GAMMA-based Score of best tree -1005310.346955
+
+Program execution info written to /gpfs/commons/home/biederstedte-934/evan_projects/CLL_tests/standard-RAxML-master/RAxML_info.Tchr10_cll1
+Best-scoring ML tree written to: /gpfs/commons/home/biederstedte-934/evan_projects/CLL_tests/standard-RAxML-master/RAxML_bestTree.Tchr10_cll1
+
+Overall execution time: 2272.605671 secs or 0.631279 hours or 0.026303 days
+
