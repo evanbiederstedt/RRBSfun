@@ -25,7 +25,7 @@ for file in totalfiles:
     df = pd.read_csv(file)
     df = df.drop("Unnamed: 0", axis=1)
     df["chromosome"] = df["position"].map(lambda x: str(x)[:5])
-    df = df[df["chromosome"] == "chr10"]
+    df = df[df["chromosome"] == "chr13"]
     df = df.drop("chromosome", axis=1)
     df_list.append(df)
 
@@ -163,6 +163,6 @@ tott = pd.Series(total_matrix.index.astype(str).str.cat(total_matrix.astype(str)
 
 os.chdir("/gpfs/commons/home/biederstedte-934/evan_projects/CLL_tests")
 
-tott.to_csv("total_CLL_chrom10.phy", header=None, index=None)
+tott.to_csv("total_CLL_chrom13.phy", header=None, index=None)
 
 print(tott.shape)
