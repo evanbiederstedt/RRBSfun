@@ -35,15 +35,20 @@ for file in totalfiles:
 
 print(len(df_list))
 
-
 total_matrix = pd.concat([df.set_index("position") for df in df_list], axis=1).reset_index().astype(object)
 
+indexed_matrix = total_matrix ## keep a copy for index of genomic coordinates
+
 total_matrix = total_matrix.drop("index", axis=1)
+
+drop_columns = total_matrix  ## keep copy in order to create 0/1/? matrix such that each character is a column
+
+len(drop_columns.columns)
 
 len(total_matrix.columns)
 
 
-total_matrix.columns = ["RRBS_normal_B_cell_A1_24_TAAGGCGA.ACAACC",
+cell_samples = ["RRBS_normal_B_cell_A1_24_TAAGGCGA.ACAACC",
                         "RRBS_normal_B_cell_A1_24_TAAGGCGA.ACCGCG",
                         "RRBS_normal_B_cell_A1_24_TAAGGCGA.ACGTGG",
                         "RRBS_normal_B_cell_A1_24_TAAGGCGA.AGGATG",
@@ -489,23 +494,53 @@ total_matrix.columns = ["RRBS_normal_B_cell_A1_24_TAAGGCGA.ACAACC",
                         'RRBS_trito_pool_2_CGTACTAG.TATCTC',
                         'RRBS_trito_pool_2_CGTACTAG.TCTCTG',
                         'RRBS_trito_pool_2_CGTACTAG.TGACAG']
-      
+
+total_matrix.columns = cell_samples
+
 print(total_matrix.shape)
 
+drop_columns = drop_columns.applymap(lambda x: int(x) if pd.notnull(x) else str("?"))
+
+drop_columns = drop_columns.astype(str).apply(''.join)
+
+drop_columns  = drop_columns.reset_index()
 
 total_matrix = total_matrix.applymap(lambda x: int(x) if pd.notnull(x) else str("?"))
 
-
 total_matrix = total_matrix.astype(str).apply(''.join)
-
-
-tott = pd.Series(total_matrix.index.astype(str).str.cat(total_matrix.astype(str),'    '))
 
 os.chdir("/gpfs/commons/home/biederstedte-934/evan_projects/CLL_tests")
 
-tott.to_csv("total_cells.phy", header=None, index=None)
+tott = pd.Series(total_matrix.index.astype(str).str.cat(total_matrix.astype(str),'    '))
+
+tott_drop_columns = pd.Series(drop_columns.index.astype(str).str.cat(total_matrix.astype(str),'    '))
 
 print(tott.shape)
+print(tott_drop_columns.shape)
+
+df_tott_column_position = tott_drop_columns.apply(lambda x: pd.Series(list(x)))
+
+df_tott_column_position.drop( df_tott_column_position.columns[[i for i in range(6)]], axis=1, inplace=True) ## drop first 5 columns
+
+### rename columns
+df_tott_column_position = df_tott_column_position.reindex(columns=indexed_matrix["index"].tolist())
+
+
+integers_to_sort = df_tott_column_position.columns.to_series().str.extract("([a-z-A-Z]+)(\d*)_(\d+)", expand=True)  # use str.extract to get integers to sort
+
+integers_to_sort[1] = integers_to_sort[1].str.zfill(2)
+integers_to_sort[2] = integers_to_sort[2].str.zfill(10)
+integers_to_sort["new_coordinates"] = integers_to_sort.apply(lambda x: "{}{}_{}".format(x[0],x[1],x[2]), axis=1)
+
+df_tott_column_position.columns =  integers_to_sort["new_coordinates"]
+
+df_tott_column_position.columns.name = None
+
+df_tott_column_position = df_tott_column_position.sort_index(axis=1)
+
+df_tott_column_position.insert(0, "cell_sample", value = cell_samples)
+
+df_tott_column_position.to_csv("total_cells_genomic_coordinates_sorted.csv", header=None, index=None)
 
              
 
