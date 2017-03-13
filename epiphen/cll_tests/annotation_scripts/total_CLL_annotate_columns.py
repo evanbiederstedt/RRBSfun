@@ -12,6 +12,7 @@ cw154 = glob.glob("binary_position_RRBS_cw154*")
 trito = glob.glob("binary_position_RRBS_trito_pool*")
 
 
+
 print(len(cw154))
 print(len(trito))
 
@@ -38,6 +39,7 @@ drop_columns = total_matrix  ## keep copy in order to create 0/1/? matrix such t
 len(drop_columns.columns)
 
 len(total_matrix.columns)
+
 
 cell_samples  = ['RRBS_cw154_CutSmart_proteinase_K_TAGGCATG.ACAACC',
                         'RRBS_cw154_CutSmart_proteinase_K_TAGGCATG.ACCGCG',
@@ -169,7 +171,23 @@ print(tott_drop_columns.shape)
 
 df_tott_column_position = tott_drop_columns.apply(lambda x: pd.Series(list(x)))
 
-df_tott_column_position.drop( df_tott_column_position.columns[[i for i in range(6)]], axis=1, inplace=True) ## drop first 5 columns
+df_tott_column_position_T = df_tott_column_position.T   ## create transpose, and shift on columns [I don't think there is a pandas-efficient way to shift row elements left/right systematically]
+
+for i in range(10):  ## 0 to 9
+    df_tott_column_position_T[i]= df_tott_column_position_T[i].shift(2)
+
+for i in range(90):
+    j = i + 10      ## 10 to 99
+    df_tott_column_position_T[j]= df_tott_column_position_T[j].shift(1)
+
+
+df_tott_column_position = df_tott_column_position_T.T
+
+
+df_tott_column_position.drop( df_tott_column_position.columns[[i for i in range(8)]], axis=1, inplace=True) ## drop first 7 columns
+
+
+
 
 ### rename columns
 df_tott_column_position = df_tott_column_position.reindex(columns=indexed_matrix["index"].tolist())
