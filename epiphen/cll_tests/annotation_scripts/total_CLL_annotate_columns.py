@@ -150,6 +150,9 @@ total_matrix.columns = cell_samples
 
 print(total_matrix.shape)
 
+## >>> print(total_matrix.shape)
+## (6336559, 104)
+
 drop_columns = drop_columns.applymap(lambda x: int(x) if pd.notnull(x) else str("?"))
 
 drop_columns = drop_columns.astype(str).apply(''.join)
@@ -160,16 +163,21 @@ total_matrix = total_matrix.applymap(lambda x: int(x) if pd.notnull(x) else str(
 
 total_matrix = total_matrix.astype(str).apply(''.join)
 
+
 os.chdir("/gpfs/commons/home/biederstedte-934/evan_projects/CLL_tests")
 
 tott = pd.Series(total_matrix.index.astype(str).str.cat(total_matrix.astype(str),'    '))
 
-tott_drop_columns = pd.Series(drop_columns.index.astype(str).str.cat(total_matrix.astype(str),'    '))
+tott_drop_columns = pd.Series(drop_columns.index.astype(str).str.cat(total_matrix.astype(str),'    '))  ## [104 rows x 6336566 columns]
 
 print(tott.shape)
 print(tott_drop_columns.shape)
 
-df_tott_column_position = tott_drop_columns.apply(lambda x: pd.Series(list(x)))
+
+df_tott_column_position = tott_drop_columns.apply(lambda x: pd.Series(list(x)))  ## [104 rows x 6336566 columns]
+## extra NaN's here
+
+
 
 df_tott_column_position_T = df_tott_column_position.T   ## create transpose, and shift on columns [I don't think there is a pandas-efficient way to shift row elements left/right systematically]
 
@@ -184,13 +192,11 @@ for i in range(90):
 df_tott_column_position = df_tott_column_position_T.T
 
 
-df_tott_column_position.drop( df_tott_column_position.columns[[i for i in range(8)]], axis=1, inplace=True) ## drop first 7 columns
-
-
-
+df_tott_column_position.drop( df_tott_column_position.columns[[i for i in range(7)]], axis=1, inplace=True) ## drop first 6 columns
 
 ### rename columns
-df_tott_column_position = df_tott_column_position.reindex(columns=indexed_matrix["index"].tolist())
+indexed_matrixT = indexed_matrix.T
+df_tott_column_position.columns = indexed_matrixT.ix[0]
 
 
 integers_to_sort = df_tott_column_position.columns.to_series().str.extract("([a-z-A-Z]+)(\d*)_(\d+)", expand=True)  # use str.extract to get integers to sort
