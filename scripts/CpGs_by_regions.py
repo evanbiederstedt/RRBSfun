@@ -79,10 +79,10 @@ for filename in all_files:
     df["total_avgReadCpGs_shelf"] = df["avgReadCpGs_shelf"].sum()
                                                                              
     df["filename"] = str(filename)
-
-    df = df[["filename", "total_avgReadCpGs_genesDistance", "total_avgReadCpGs_exonsDistance", "total_avgReadCpGs_intronsDistance", "total_avgReadCpGs_promoterDistance", "total_avgReadCpGs_cgiDistance", "total_avgReadCpGs_ctcfDistance", "total_avgReadCpGs_ctcfUpDistance", "total_avgReadCpGs_ctcfDownDistance", "total_avgReadCpGs_geneDistalRegulatoryModulesDistance", "total_avgReadCpGs_vistaEnhancersDistance", "total_avgReadCpGs_3PrimeUTRDistance", "total_avgReadCpGs_5PrimeUTRDistance", "total_avgReadCpGs_firstExonDistance", "total_avgReadCpGs_geneDistalRegulatoryModulesK562Distance", "total_avgReadCpGs_hypoInHues64Distance", "total_avgReadCpGs_intergenic", "total_avgReadCpGs_shore", "total_avgReadCpGs_shelf"]]
-                                                                
+    
     newdf1 = newdf1.append(df, ignore_index=True)
+
+newdf1 = newdf1[["filename", "total_avgReadCpGs_genesDistance", "total_avgReadCpGs_exonsDistance", "total_avgReadCpGs_intronsDistance", "total_avgReadCpGs_promoterDistance", "total_avgReadCpGs_cgiDistance", "total_avgReadCpGs_ctcfDistance", "total_avgReadCpGs_ctcfUpDistance", "total_avgReadCpGs_ctcfDownDistance", "total_avgReadCpGs_geneDistalRegulatoryModulesDistance", "total_avgReadCpGs_vistaEnhancersDistance", "total_avgReadCpGs_3PrimeUTRDistance", "total_avgReadCpGs_5PrimeUTRDistance", "total_avgReadCpGs_firstExonDistance", "total_avgReadCpGs_geneDistalRegulatoryModulesK562Distance", "total_avgReadCpGs_hypoInHues64Distance", "total_avgReadCpGs_intergenic", "total_avgReadCpGs_shore", "total_avgReadCpGs_shelf"]]
 
 
 newdf1.to_csv("CpGs_by_regions.csv", index=False)
